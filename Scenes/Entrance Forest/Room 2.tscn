@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Characters/Enemies/WanderingEnemy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Grasslands.tres" type="TileSet" id=3]
+[ext_resource path="res://Portal.tscn" type="PackedScene" id=4]
+
+[node name="Room 2" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 512, 512 )
+format = 1
+tile_data = PoolIntArray( -262132, 0, 196608, -262131, 0, 196609, -262130, 0, 196609, -262129, 0, 196610, -196598, 0, 196611, -131068, 0, 196608, -131067, 0, 196609, -131066, 0, 196609, -131065, 0, 196609, -131064, 0, 196610, -131055, 0, 196611, -65534, 0, 196611, 65532, 0, 196608, 65533, 0, 196609, 65534, 0, 196609, 65535, 0, 196609, 0, 0, 196610, 15, 0, 196611, 65547, 0, 196608, 65548, 0, 196609, 65549, 0, 196609, 65550, 0, 196610 )
+
+[node name="WanderingEnemy" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1320, -576 )
+
+[node name="WanderingEnemy2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5408, -1600 )
+
+[node name="WanderingEnemy3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8968, -1072 )
+
+[node name="WanderingEnemy4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 7976, -64 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( -768, -256 )
+
+[node name="Portal" parent="." instance=ExtResource( 4 )]
+position = Vector2( -1792, -256 )
+next_scene = "res://Scenes/Entrance Forest/Room 1.tscn"
+
+[node name="Portal2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 5888, 256 )
+next_scene = "res://Scenes/World.tscn"
